@@ -16,14 +16,14 @@ const Support = inject("support_store")(
       socketRef.current = io.connect("http://localhost:5050");
       props.support_store.setSocketConnection(socketRef.current);
       return;
-    }, []);
+    }, [props.support_store]);
 
     useEffect(() => {
       props.support_store.socketConnection.on("get-rooms", (rooms) => {
         props.support_store.updateRooms(rooms);
       });
       return;
-    }, [props.support_store.rooms]);
+    }, [props.support_store.rooms,props.support_store]);
 
     useEffect(() => {
       props.support_store.socketConnection.on(
@@ -45,7 +45,7 @@ const Support = inject("support_store")(
         }
       });
       return;
-    }, [props.support_store.currentRoomChat]);
+    }, [props.support_store.currentRoomChat,props.support_store]);
 
     useEffect(() => {
       props.support_store.socketConnection.on("get-room-number", (room) => {
@@ -68,7 +68,7 @@ const Support = inject("support_store")(
           props.support_store.notifyRoom(payload.room);
       });
       return;
-    }, []);
+    }, [props.support_store]);
 
     function sendMessage(e) {
       e.preventDefault();

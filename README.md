@@ -5,10 +5,12 @@ On the server folder file ,socket-endpoints explenation file
 ## ----NPM Packaeges----
 
 1.socket.io
-2.express 
-3.Mobx
-4.nodemon
-5.react-router-dom
+2.socket.io-client
+3.express 
+4.Mobx (and all installations with it)
+5.nodemon
+6.react-router-dom
+
 
 
 ## ----To be delivered---- 

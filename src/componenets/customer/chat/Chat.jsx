@@ -12,7 +12,7 @@ const Chat = inject("customer_store")(
         props.customer_store.socketConnection.emit("join-room", room);
       });
       return;
-    }, []);
+    }, [props.customer_store.socketConnection]);
 
     useEffect(() => {
       props.customer_store.socketConnection.on("get-message", (message) => {
@@ -22,7 +22,7 @@ const Chat = inject("customer_store")(
         ]);
       });
       return;
-    }, []);
+    }, [props.customer_store]);
 
     useEffect(() => {
       if (!props.customer_store.alreadyOpened) {
@@ -35,7 +35,7 @@ const Chat = inject("customer_store")(
         props.customer_store.setAlreadyOpened()
         return () => clearTimeout(timer);
       } else return;
-    }, []);
+    }, [props.customer_store]);
 
     const sendMessage = (e) => {
       e.preventDefault();
@@ -56,7 +56,6 @@ const Chat = inject("customer_store")(
         <div className="chat-header">
           <div className="user-name">
             <h1 className="name" style={{ fontSize: "30px", margin: "10px" }}>
-              {/* {` ${userName}`} */}
               artchat
             </h1>
           </div>

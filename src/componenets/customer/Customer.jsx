@@ -15,7 +15,7 @@ const Customer = inject("customer_store")(
       socketRef.current = io.connect("http://localhost:5050");
       props.customer_store.setSocketConnection(socketRef.current)
       return;
-    }, []);
+    }, [props.customer_store]);
 
     useEffect(() => {
       socketRef.current.on("get-room-number", (room) => {
@@ -23,7 +23,7 @@ const Customer = inject("customer_store")(
         socketRef.current.emit("join-room", room);
       });
       return;
-    }, []);
+    }, [props.customer_store]);
 
     const openChat =  () => {
       chatOpen ? setChatOpen(false) : setChatOpen(true);
