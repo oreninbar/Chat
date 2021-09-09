@@ -1,0 +1,43 @@
+.customer-container {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/web-wrapper.PNG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.customer-container .close-icon {
+  position: absolute;
+  height: 8rem;
+  top: -2rem;
+  right: 4rem;
+  z-index: 1;
+}
+
+.customer-container .chat-icon.false {
+  position: absolute;
+  bottom: 10rem;
+  right: 10rem;
+  height: 12rem;
+}
+
+.customer-container .chat-icon.true {
+  display: none;
+}
+
+.customer-container .customer-chat-wrapper {
+  position: absolute;
+  bottom: 1rem;
+  right: 3rem;
+  width: 38%;
+  height: 85%;
+}
+
+.customer-container .customer-chat-wrapper.false {
+  display: none;
+}
+
+.customer-container .customer-chat-wrapper.true {
+  display: flex;
+}

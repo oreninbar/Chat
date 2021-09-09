@@ -1,0 +1,23 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+  font-family: 'Lato', sans-serif;
+
+}
+
+
+
