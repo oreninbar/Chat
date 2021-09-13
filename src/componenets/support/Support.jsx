@@ -130,6 +130,11 @@ const Support = inject("support_store")(
               name="name"
               value={props.support_store.message}
               onChange={handleInput}
+              onKeyPress={event => {
+                if (event.key === 'Enter') {
+                  sendMessage(event);
+                }
+              }}
             />
             <div type="submit" className="input-btn" onClick={sendMessage}>
               send
