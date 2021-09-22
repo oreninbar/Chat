@@ -53,8 +53,6 @@
 
 .chat-container .chat-input {
   padding: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   justify-content: center;
