@@ -8,7 +8,8 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
-  background-color: whitesmoke;
+  background-color: rgb(219, 215, 215);
+  cursor: pointer;
   font-family: "Lato", sans-serif;
   font-size: 1.7rem;
 }

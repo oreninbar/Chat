@@ -83,6 +83,11 @@ const Chat = inject("customer_store")(
             name="name"
             value={props.customer_store.message}
             onChange={handleInput}
+            onKeyPress={event => {
+              if (event.key === 'Enter') {
+                sendMessage(event);
+              }
+            }}
           />
           <div type="submit" className="input-btn" onClick={sendMessage}>
             send
